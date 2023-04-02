@@ -10,7 +10,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDate;
 import java.util.List;
-@Document(collection = "accountsdata")
+@Document(collection = "AccountsData")
 @Data
 @NoArgsConstructor
 public class Account {
