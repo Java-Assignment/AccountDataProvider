@@ -34,8 +34,7 @@ public class AccountServiceImpl implements AccountService {
 
     @Override
     public List<AccountDTO> getAccounts() {
-        List<AccountDTO> accounts;
-        accounts = accountRepo.findAll().stream().map(a -> accountMapper.convertActoAccountDTO(a)).collect(Collectors.toList());
+        List<AccountDTO> accounts = accountRepo.findAll().stream().map(a -> accountMapper.convertActoAccountDTO(a)).toList();
         return  accounts;
     }
 }
